@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "283524954610",
+    "firebase_url": "https://engo-651-final-project-default-rtdb.firebaseio.com",
+    "project_id": "engo-651-final-project",
+    "storage_bucket": "engo-651-final-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283524954610:android:4620952958eb8ae012136b",
+        "android_client_info": {
+          "package_name": "com.example.engo651final"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283524954610-94dofqn2ct3lesqj4umsnp009s79dj7t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaAZX-28NJ6VfB35cICzMhDxCm-7Yd73o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "283524954610-94dofqn2ct3lesqj4umsnp009s79dj7t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

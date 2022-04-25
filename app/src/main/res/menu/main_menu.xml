@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    tools:context=".dashboard">
+
+
+    <group android:checkableBehavior="single">
+        <item android:title="Adventure" >
+            <menu>
+                <item
+                    android:id="@+id/nav_start"
+                    android:icon="@drawable/ic_baseline_location_on_24"
+                    android:title="Start a Venture" />
+                <item
+                    android:id="@+id/nav_amenities"
+                    android:icon="@drawable/ic_baseline_directions_bike_24"
+                    android:title="Look for Amenities" />
+                <item
+                    android:id="@+id/nav_statistics"
+                    android:icon="@drawable/ic_baseline_query_stats_24"
+                    android:title="Statistics" />
+            </menu>
+        </item>
+    </group>
+    <group android:checkableBehavior="single">
+        <item android:title="Profile" >
+            <menu>
+                <item
+                    android:id="@+id/nav_settings"
+                    android:icon="@drawable/ic_baseline_settings_24"
+                    android:title="Settings" />
+            </menu>
+        </item>
+
+    </group>
+    <group android:checkableBehavior="single">
+        <item android:title="Others" >
+            <menu>
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/logout_icon"
+                    android:title="Logout" />
+                <item
+                    android:id="@+id/nav_exit"
+                    android:icon="@drawable/ic_baseline_close_24"
+                    android:title="Exit"/>
+            </menu>
+        </item>
+    </group>
+    <item android:title="Designed by Arash Mozhdehi" >
+
+    </item>
+</menu>

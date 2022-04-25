@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".amenities">
+
+    <fragment xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mapf_amenities"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></fragment>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="skip"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:clickable="false"
+        android:focusable="true"
+        android:tint="@color/white"
+        app:backgroundTint="@color/blue_a200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_ios_new_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_toilet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="gotoToilet"
+        android:tint="@color/white"
+        android:visibility="invisible"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/fab_water"
+        app:layout_constraintEnd_toEndOf="@+id/fab_water"
+        app:srcCompat="@drawable/icons8_toilet_48"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_water"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="gotoWater"
+        android:tint="@color/white"
+        android:visibility="invisible"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/fab_bench"
+        app:layout_constraintEnd_toEndOf="@+id/fab_bench"
+        app:srcCompat="@drawable/icons8_water_64"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_bench"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="gotoBench"
+        android:tint="@color/white"
+        android:visibility="invisible"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/fab_amenities"
+        app:layout_constraintEnd_toEndOf="@+id/fab_amenities"
+        app:srcCompat="@drawable/icons8_bench_58"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_amenities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="55dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:tint="@color/white"
+        app:backgroundTint="@color/blue_a200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintVertical_bias="1"
+        app:srcCompat="@drawable/icons_place_marker"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <CheckBox
+        android:id="@+id/resttoom_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="-15dp"
+        android:elevation="3dp"
+        android:enabled="false"
+        android:shadowColor="@color/black"
+        android:text="Rest Rooms"
+        android:textColor="@color/royal_blue"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/water_checkBox"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/water_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginBottom="-15dp"
+        android:elevation="3dp"
+        android:enabled="false"
+        android:shadowColor="@color/black"
+        android:text="Water Fountains"
+        android:textColor="@color/royal_blue"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bench_checkBox"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/bench_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginBottom="18dp"
+        android:elevation="3dp"
+        android:enabled="false"
+        android:shadowColor="@color/black"
+        android:text="Benches"
+        android:textColor="@color/royal_blue"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="60dp"
+        android:elevation="3dp"
+        android:onClick="help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_help_24" />
+
+    <CheckBox
+        android:id="@+id/cb_terrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:elevation="3dp"
+        android:shadowColor="@color/black"
+        android:text="Terrain View"
+        android:textColor="@color/lavender_blue"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fab_skip" />
+
+    <CheckBox
+        android:id="@+id/cb_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="-23dp"
+        android:elevation="3dp"
+        android:shadowColor="@color/black"
+        android:text="Normal View"
+        android:textColor="@color/lavender_blue"
+        android:checked="true"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_terrain" />
+
+    <CheckBox
+        android:id="@+id/cb_hybrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="-23dp"
+        android:elevation="3dp"
+        android:shadowColor="@color/black"
+        android:text="Hybrid View"
+        android:textColor="@color/lavender_blue"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_normal" />
+
+    <CheckBox
+        android:id="@+id/cb_satellite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="-23dp"
+        android:elevation="3dp"
+        android:shadowColor="@color/black"
+        android:text="Satellite View"
+        android:textColor="@color/lavender_blue"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_hybrid" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Park Fun</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open_drawer_string">Open navigation drawer</string>
+    <string name="close_drawer_string">Close navigation drawer</string>
+    <string name="title_activity_amenity">amenity</string>
+    <!--    <string name="mapbox_access_token">sk.eyJ1IjoiYW0xOTkwIiwiYSI6ImNsMXMzeWNyNjBubHczbHFxNzlzMG90MHcifQ.f_tYE1axreRgiixOTTy0MA</string>-->
+    <string name="mapbox_access_token">pk.eyJ1IjoiYW0xOTkwIiwiYSI6ImNrem82MnA5ajF2cHMydWxsbmZ1YjdkMWEifQ.QgFHMzFtmGs41zxT7O8zWw</string>
+
+</resources>

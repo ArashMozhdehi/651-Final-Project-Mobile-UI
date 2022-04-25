@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout"
+    android:background="@drawable/day_bg2"
+    tools:context=".settings">
+
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/log_reg_edit_box"
+
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:elevation="4dp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginTop="20dp"
+        android:hint="New Password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight" />
+
+    <EditText
+        android:id="@+id/weight"
+        android:background="@drawable/log_reg_edit_box"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:drawableLeft="@drawable/ic_baseline_scale_24"
+        android:elevation="4dp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginBottom="20dp"
+        android:hint="New Weight"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_name" />
+
+<!--    <com.airbnb.lottie.LottieAnimationView-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:layout_marginTop="33dp"-->
+<!--            android:id="@+id/logo_lottie"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:lottie_loop="true"-->
+
+<!--            app:lottie_autoPlay="true"-->
+<!--            app:lottie_rawRes="@raw/settings_2">-->
+<!--        </com.airbnb.lottie.LottieAnimationView>-->
+<!--    <TextView-->
+<!--        android:id="@+id/change_pic"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="Change Photo"-->
+<!--        android:textSize="15dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/settings_profile_img"
+        android:elevation="5dp"
+        android:tint="@color/white"
+        app:tint="@android:color/white"
+        app:backgroundTint="@color/blue"
+        app:srcCompat="@drawable/ic_baseline_add_a_photo_24"
+        android:onClick="set_photo"
+        app:layout_constraintBottom_toBottomOf="@+id/settings_profile_img">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginTop="33dp"
+        android:id="@+id/settings_profile_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:civ_border_width="4dp"
+        app:civ_border_color="@color/white"
+        android:src="@drawable/icons8_person_96"
+        android:onClick="set_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+<!--        <com.google.android.material.imageview.ShapeableImageView-->
+<!--            android:id="@+id/profile_img"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/ic_baseline_person_24"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"-->
+<!--            app:strokeWidth="1dp" />-->
+
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textSize="40dp"
+        android:fontFamily="@font/script"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_profile_img" />
+
+<!--    <Button-->
+<!--        android:id="@+id/img_btn"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:background="@drawable/circle_btn"-->
+<!--        android:backgroundTint="#fbdb48"-->
+<!--        android:drawableTop="@android:drawable/ic_dialog_map"-->
+<!--        android:text="Select"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/submit_btn"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/profile_name" />-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:onClick="submit"
+        android:text="Submit"
+        android:textColor = "@color/white"
+        android:background="@drawable/log_reg_buttons"
+        android:backgroundTint="#891191"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="skip"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_left"
+        app:tint="@color/blue" />
+
+    <ImageView
+        android:id="@+id/day_pic"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/set_back"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/bike_pic"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/cycler2"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"/>
+
+    <ImageView
+        android:elevation="3dp"
+        android:id="@+id/imageView11"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="help"
+        app:srcCompat="@drawable/ic_baseline_help_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

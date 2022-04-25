@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:background="@drawable/main_menu_backgroud2"
+    android:gravity="bottom"
+    android:padding="0dp"
+    android:id="@+id/main_menu_header"
+    tools:context=".dashboard">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="60dp"
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/icons8_person_96"
+        app:civ_border_width="4dp"
+        app:civ_border_color="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/imageView13"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/ic_baseline_pedal_bike_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></ImageView>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/justanotherhand_regular"
+        android:text="Welcome!"
+        android:textSize="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/profile_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/davison_spencerian"
+        android:text="Designed by Arash Mozhdehi"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10">
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
