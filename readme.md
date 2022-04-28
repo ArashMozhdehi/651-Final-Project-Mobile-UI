@@ -26,7 +26,7 @@ The Figure 1 illustrates the archetectural design sigram of this Software Suite.
 
 ## UML Sequence Diagram
 
-In Figure 2, you can see the Sequence Diagram of the Web-based Application. For the Sequence Diagram of the Mobile Application
+In Figure 2, you can see the Sequence Diagram of the Mobile Application. For the Sequence Diagram of Web-based Application.
 
 <p align="center" width="100%">
     <img width="100%" src="images/Web UI Sequence Diagram.png"> 
