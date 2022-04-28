@@ -19,7 +19,7 @@
 ## UML Architectural Design
 The Figure 1 illustrates the archetectural design sigram of this Software Suite.
 <p align="center" width="100%">
-    <img width="70%" src="../ENGO-651-Final-Project-Backend/images/software arch.png"> 
+    <img width="70%" src="/images/software arch.png"> 
     <p align="center" > Figure 1: UML Diagram for Architectural Design</>
 </p>
 <!-- ![Architectural Design](/images/Picture1.jpg) -->
@@ -29,7 +29,7 @@ The Figure 1 illustrates the archetectural design sigram of this Software Suite.
 In Figure 2, you can see the Sequence Diagram of the Mobile Application.
 
 <p align="center" width="100%">
-    <img width="100%" src="../ENGO-651-Final-Project-Backend/images/Web UI Sequence Diagram.png"> 
+    <img width="100%" src="/images/Mobile UI Sequence Diagram.png"> 
     <p align="center" > Figure 2: UML Sequence Diagram</>
 </p>
 
