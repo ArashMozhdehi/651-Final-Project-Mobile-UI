@@ -6,6 +6,6 @@ public class global extends Application {
     public String l_name = "";
     public String user_name = "";
     public String token = "";
-//    public String ip_port = "http://10.80.1.229:5000";
-    public String ip_port = "https://engo651-arash-mozhdehi.herokuapp.com/";
+    public String ip_port = "http://10.12.75.46:5000";
+//    public String ip_port = "https://engo651-arash-mozhdehi.herokuapp.com/";
 }
