@@ -3,12 +3,85 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
+- [UML Architectural Design](#uml-architectural-design)
+- [UML Sequence Diagram](#uml-sequence-diagram)
+- [Architectural Description](#architectural-description)
 - [Functionalities](#functionalities)
+- [Achievements of Mobile Application Regarding the Project Requirements](#achievements-of-mobile-application-regarding-the-project-requirements)
 - [Supplementary Information](#supplementary-information)
 - [Project Launch](#project-launch)
 
+
 ## Introduction
 “Bike Assistant” is a software suite aims to provide an aesthetically pleasing and animated UI for cyclists in Calgary to have one-stop supporting service during their journey. The goal of this project is to provide a more convenient, fun and safer cycling experience for Calgarians. “Bike Assistant” consists of an android mobile app and an interactive web map app. This file describes the functionalities of the mobile app. Please refer to [another repo](https://github.com/ArashMozhdehi/ENGO-651-Final-Project-Backend) of this project for the technologies and technical details applied as well as the functionalities of the web map app. 
+
+
+## UML Architectural Design
+The Figure 1 illustrates the archetectural design sigram of this Software Suite.
+<p align="center" width="100%">
+    <img width="70%" src="images/software arch.png"> 
+    <p align="center" > Figure 1: UML Diagram for Architectural Design</>
+</p>
+<!-- ![Architectural Design](/images/Picture1.jpg) -->
+
+## UML Sequence Diagram
+
+In Figure 2, you can see the Sequence Diagram of the Web-based Application. For the Sequence Diagram of the Mobile Application
+
+<p align="center" width="100%">
+    <img width="100%" src="images/Web UI Sequence Diagram.png"> 
+    <p align="center" > Figure 2: UML Sequence Diagram</>
+</p>
+
+## Architectural Description
+The compentents of this sofeware suite are, as follows:
+### 1. Databases
+- PostgreSQL database with PostGIS host on Heroku cloud platform to store user’s activity. Figure 3, shows the UML Entity-Relation Diagram.
+- **Firebase Real-Time DB**, a NoSQL database, host on Google cloud servers to store the user’s profile and credential. In Figure 4, the data storage model of this Real-Time DB is observable. We used Firebase Real-Time DB, for subscribing and real-time update upon data changes.
+- **Firebase Storage** is used for staroage of user's profile images. The storage structure of Firebase Storage allows storing images in file structure instead of in BLOB/CLOB format.
+
+<p align="center" width="100%">
+    <img width="100%" src="images/ENGO 651's ERD.png"> 
+    <p align="center" > Figure 3: UML Entity-Relation Diagram</>
+</p>
+
+<p align="center" width="100%">
+    <img width="100%" src="images/Firebase RT DB.png"> 
+    <p align="center" > Figure 4: Firebase Real-Time DB's storage model</>
+</p>
+
+<p align="center" width="100%">
+    <img width="100%" src="images/firebase Storage.png"> 
+    <p align="center" > Figure 5: Firebase Storage's storage model</>
+</p>
+
+### 2. Backend RESTful API
+- Backend RESTful API powered by Flask library of Python.
+- Consists of **17 API endpoints**, with over **1,000 lines of code** in Python high-level programming language, that each are explained in detail in GitBook.
+- Token assignment is used for secure authorization and authentication when the API is used.
+- To prevent **Dictionary, Rainbow, and impade Brute Force attacks**, we used an information security method of Salt concatination and Hasing using SHA256.
+### 3. Web Application
+- HTML, CSS and JS for asynchronous communication and interactive and responsive front-end.
+- Web-UI consist of 12 html pages, 9 CSS stylesheet files. 8 .js script files in JavaScript with over **5,000 lines of code**. 
+- It also consists of 18 routes and methods in Python.
+- Material UI and Bootstrap 5 for aesthetic an interactive UI design.
+- For the **Asynchronous** communication, to improve UX, we used jQuery with **AJAX** without SOAP protocol to take advantage of JSON format instead of XML.
+### 4. Mobile Application
+- It consist of 27 Java classes with over **15,00 lines of code**.
+- It also consists of 27 layout designs with over **9000 lines of code** in XML.
+- 
+### 5. Others
+- Google Map JS SDK for map visualization and a mapping frontend.
+- Google Firebase SDK for retrival and storage.
+- Google’s Matrix API, Google Place, Google Direction are the other APIs that are used in this web application.
+- We used subscription based messagin protocol to keep track on users’ location, bearing, velocity, source, and destination of the Mobile Application users.
+- We used **Machine Learning** for best amenity's recommendation.
+- jQuery with AJAX without SOAP protocol is used for Async communication.
+- For simplification and noise reduction and smoothing of trajectories, we used **Douglas–Peucker** algorithm and **Kalman filtering** technique.
+- We used a fromula from "The Compendium of Physical Activities" for Calories burnt calculation.
+- [Gitbook](https://arash-mozhdehi.gitbook.io/bike-assistant/) for comprehensive documentation of this project.
+- [GitBook](https://arash-mozhdehi.gitbook.io/restful-apis-tutorial/) for API documentation with examples.
+- [Swagger](https://app.swaggerhub.com/apis-docs/uofcengo/BikeAssistance/1.0.0) for API documentation with examples.
 
 ## Functionalities
 ### 1. Initiate the App
@@ -109,14 +182,50 @@ User can select an image from the google drive or phone storage and make adjustm
 
 User can view the Calories burned Today, last 7 days, and last 30 days with progress bar and bar charts. 
 #### 3.5. Logout
-User can logout the session.
+User can logout of the system through the logout button.
+
+## Achievements of Mobile Application Regarding the Project Requirements
+This Mobile application satisfies the following requirements for the ENGO 651 course project.
+1. "your final project must be sufficiently distinct from the labs in this course, and must be more complex than the labs." : This Mobile Application is far more complex than the lab as it has sophisticated mapping, animation, data collection, data collection, data storage features. (Requirement #1)
+2. "must have a mapping front-end": Two thoroughly customized and fully interactive maps, customized for this application's use, with the ability to be intractably customized by the user as well are presented to show the amenities and the locations in the city of Calgary. The user is also provided with the distance and estimated time of reaching the destinations and amenities. (Requirement #2)
+3. "must have a RESTful API back-end": The application is connected to the RESTful API back-end, powered by Flask library of python. (Requirement #3)
+4. "RESTful API must have authentication": The token connected by the back-end is used for communication with the back-end. (Requirement #4)
+5. "must use at least one open data": This application uses the following data sources for the purpose of mapping and data analysis: (Requirement #6)
+   * Open Calgary
+     * Parking lot for the bikes
+     * Historical sites
+     * Ungoing events in the city of Calgary (It only pick the events that are not ended yet)
+     * Calgary's historical sites
+     * Calgary's benches
+     * Calgary's wash rooms
+     * Calgary's water fountains
+     * Calgary's live traffic incidents
+     * Calgary's construction sites
+   * Google's APIs
+     * Google Maps SDKs
+     * Google Directions (For visualizing the bike-friendly route to the destination)
+     * Google Distance Matrix (For measuring the distance between the current location of the user and the destination)
+     * Google Geocoding (For finding the place based on the Zip Code)
+     * Google Geolocation (User's current location)
+     * Google Places (For auto-complete)
+6. "must use at least one live data set": This mobile application uses the current location of the user and Calgary's live traffic incidents as the live data sources. (Requirement #7)
+7. "must perform data analytics using the following data sources": The mobile application performs data analysis on the current location of the user, Calgary's live traffic incidents (another live data source), and construction sites. It sends a notification to the user when he/she approaches those locations. (Requirement #8)
+8. "the front-end must be interactive": This mobile application provides a responsive, interactive, user-friendly, aesthetically pleasing, animated through a Android-based UI. (Requirement #9)
+9. "solve a problem": The purpose of this Mobile application is to allow the users to find bike-friendly destinations, e.g bike park, and the best bike route for them. It also directs the users to the amenities, e.g. wash room, in the city of Calgary. It also provides safety to the users by giving them heads up about the dangers along the road, e.g. incident sites. (Requirement #10)
 
 ## Supplementary Information
-- [Mobile Application Manual]( https://arash-mozhdehi.gitbook.io/bike-assistant/v/mobile-application/)
-- [Web-based Application Manual](https://arash-mozhdehi.gitbook.io/bike-assistant/v/web-based-application/)
-- [Data Specifications](https://arash-mozhdehi.gitbook.io/bike-assistant/)
+- [Mobile Application Manual and Documentation]( https://arash-mozhdehi.gitbook.io/bike-assistant/v/mobile-application/)
+- [Web-based Application Manual and Documentation](https://arash-mozhdehi.gitbook.io/bike-assistant/v/web-based-application/)
+- [Database Documentation](https://arash-mozhdehi.gitbook.io/bike-assistant/)
+- [GitBiik Space](https://arash-mozhdehi.gitbook.io/bike-assistant/)
+- [API Documentation - GitBook](https://arash-mozhdehi.gitbook.io/restful-apis-tutorial/)
 - [API Documentation - Swagger](https://app.swaggerhub.com/apis-docs/uofcengo/BikeAssistance/1.0.0)
-- [Backend GitHub Repo](https://github.com/ArashMozhdehi/ENGO-651-Final-Project-Backend)
+- [Backend API and Web-UI's GitHub Repo](https://github.com/ArashMozhdehi/ENGO-651-Final-Project-Backend)
+
+## Project Launch
+February 2022
+
 
 ## Project Launch
 April 2022
+
