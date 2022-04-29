@@ -225,8 +225,3 @@ This Mobile application satisfies the following requirements for the ENGO 651 co
 
 ## Project Launch
 February 2022
-
-
-## Project Launch
-April 2022
-
