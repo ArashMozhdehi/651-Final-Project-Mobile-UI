@@ -16,7 +16,7 @@ import android.util.Log;
 
 public class GMail {
 
-    final String emailPort = "587";// gmail's smtp port
+    final String emailPort = "587";
     final String smtpAuth = "true";
     final String starttls = "true";
     final String emailHost = "smtp.gmail.com";
@@ -64,8 +64,7 @@ public class GMail {
         }
 
         emailMessage.setSubject(emailSubject);
-        emailMessage.setContent(emailBody, "text/html");// for a html email
-        // emailMessage.setText(emailBody);// for a text email
+        emailMessage.setContent(emailBody, "text/html");
         Log.i("GMail", "Email Message created.");
         return emailMessage;
     }
