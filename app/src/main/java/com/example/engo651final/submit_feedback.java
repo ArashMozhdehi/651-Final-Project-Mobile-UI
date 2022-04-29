@@ -1436,19 +1436,19 @@ public class submit_feedback extends AppCompatActivity {
                             double lng = location.getLongitude();
                             incidentSiteCheck(lat, lng, radius);
                             constructionSiteCheck(lat, lng, radius);
-//                            String messages = "{\"cur_lat\":\"" + lat + "\",\"cur_lng\":\"" + lng + "\",\"speed\":\"" + String.valueOf(location.getSpeed()) + "\",\"dst_lat\":\""
-//                                    + dst_lat + "\",\"dst_lng\":\"" + dst_lng + "\",\"src_lat\":\"" + src_lat + "\"," +
-//                                    "\"src_lng\":\"" + src_lng + "\"}";
-//                            if (mqqtThread != null) {
-//                                mqqtThread.stop();
-//                                mqqtThread = null;
-//                            }
-//                            mqqtThread = new Thread(new Runnable() {
-//                                public void run() {
-//                                    send_subscribe(messages);
-//                                }
-//                            });
-//                            mqqtThread.start();
+                            String messages = "{\"cur_lat\":\"" + lat + "\",\"cur_lng\":\"" + lng + "\",\"speed\":\"" + String.valueOf(location.getSpeed()) + "\",\"dst_lat\":\""
+                                    + dst_lat + "\",\"dst_lng\":\"" + dst_lng + "\",\"src_lat\":\"" + src_lat + "\"," +
+                                    "\"src_lng\":\"" + src_lng + "\"}";
+                            if (mqqtThread != null) {
+                                mqqtThread.stop();
+                                mqqtThread = null;
+                            }
+                            mqqtThread = new Thread(new Runnable() {
+                                public void run() {
+                                    send_subscribe(messages);
+                                }
+                            });
+                            mqqtThread.start();
                             String url = glob.ip_port + "/api/location_update?token=" + token + "&lat=" + lat + "&lng=" + lng;
                             try {
                                 JSONObject json = MainActivity.readJsonFromUrl(url);
