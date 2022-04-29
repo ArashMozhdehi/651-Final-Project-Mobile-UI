@@ -22,6 +22,7 @@ The Figure 1 illustrates the archetectural design sigram of this Software Suite.
     <img width="70%" src="/images/software arch.png"> 
     <p align="center" > Figure 1: UML Diagram for Architectural Design</>
 </p>
+
 <!-- ![Architectural Design](/images/Picture1.jpg) -->
 
 ## UML Sequence Diagram
