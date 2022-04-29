@@ -249,15 +249,13 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
     public static JSONObject readJsonFromUrl(String link) {
-        // Input Stream Object To Start Streaming.
-        InputStream input = null;
-        try {                                 // try catch for checked exception
-            input = new URL(link).openStream();
-            BufferedReader re = new BufferedReader(new InputStreamReader(input, Charset.forName("UTF-8")));
-            // Buffer Reading In UTF-8
-            String Text = Read(re);         // Handy Method To Read Data From BufferReader
-            JSONObject json = new JSONObject(Text);    //Creating A JSON
-            return json;    // Returning JSON
+        InputStream inputStream = null;
+        try {
+            inputStream = new URL(link).openStream();
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, Charset.forName("UTF-8")));
+            String str = Read(bufferedReader);
+            JSONObject json = new JSONObject(str);
+            return json;
         } catch (Exception e) {
             return null;
         } finally {
@@ -269,9 +267,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public static String Read(Reader re) {     // class Declaration
-        try {             // try }
-            StringBuilder str = new StringBuilder();     // To Store Url Data In String.
+    public static String Read(Reader re) {
+        try {
+            StringBuilder str = new StringBuilder();
             int temp;
             do {
 
