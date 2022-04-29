@@ -1,6 +1,7 @@
 ![Banner](/images/banner.png)
 # Bike Assistant – Mobile Application :bicyclist: :biking_woman:
 
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [UML Architectural Design](#uml-architectural-design)
