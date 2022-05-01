@@ -131,6 +131,9 @@ The registration page asks the user to enter his/her first name, last name and w
 #### 2.3. Forgot Password
 
 User can click on “Forgot your password?” in case they forgot their credentials. User is then required to input the email address of the registered account for receiving a secure recovery code to reset password.
+An email will be sent to user with the recovery code.
+User can key in the recovery code to the mobile application. New password can be set for the account. 
+
 
 <p align="center" width="100%">
     <img width="20%" src="/RzF9vUB[1].gif"> 
@@ -142,15 +145,35 @@ User can click on “Forgot your password?” in case they forgot their credenti
 <!-- ![ForgotPassword](/images/ForgotPassword1.PNG) 
 ![ForgotPassword](/images/ForgotPassword2.PNG)  -->
 
+<p align="center" width="100%">
+    <img width="20%" src="/MfeKmZR[1].gif"> 
+</p>
 
+<p align="center" width="100%">
+    <img width="20%" src="/MfeKmZR[1].gif"> 
+</p>
 
-![ForgotPassword](/images/ForgotPassword3.PNG) 
+<p align="center" width="100%">
+    <img width="20%" src="/images/IdtgYrU[1].gif"> 
+</p>
+<!-- https://i.imgur.com/IdtgYrU.gif -->
 
-An email will be sent to user with the recovery code.
+<p align="center" width="100%">
+    <img width="20%" src="/images/IdtgYrU[1].gif"> 
+</p>
+
+<p align="center" width="100%">
+    <img width="20%" src="/images/88QUEYr[1].gif"> 
+</p>
+
+<!-- https://i.imgur.com/88QUEYr.gif
+ -->
+<!-- ![ForgotPassword](/images/ForgotPassword3.PNG) 
+
 
 ![ForgotPassword](/images/ForgotPassword4.PNG) 
 ![ForgotPassword](/images/ForgotPassword5.PNG) 
-![ForgotPassword](/images/ForgotPassword6.PNG) 
+![ForgotPassword](/images/ForgotPassword6.PNG)  -->
 
 User can key in the recovery code to the mobile application. New password can be set for the account. 
 
