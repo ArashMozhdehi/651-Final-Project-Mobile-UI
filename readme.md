@@ -144,18 +144,18 @@ User can key in the recovery code to the mobile application. New password can be
 </p>
 <!-- ![ForgotPassword](/images/ForgotPassword1.PNG) 
 ![ForgotPassword](/images/ForgotPassword2.PNG)  -->
-
+<!-- 
 <p align="center" width="100%">
     <img width="20%" src="/MfeKmZR[1].gif"> 
 </p>
 
 <p align="center" width="100%">
     <img width="20%" src="/MfeKmZR[1].gif"> 
-</p>
+</p> -->
 
-<p align="center" width="100%">
+<!-- <p align="center" width="100%">
     <img width="20%" src="/images/IdtgYrU[1].gif"> 
-</p>
+</p> -->
 <!-- https://i.imgur.com/IdtgYrU.gif -->
 
 <p align="center" width="100%">
