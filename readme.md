@@ -163,7 +163,7 @@ User can key in the recovery code to the mobile application. New password can be
 </p>
 
 <p align="center" width="100%">
-    <img width="20%" src="/images/88QUEYr[1].gif"> 
+    <img width="80%" src="/images/88QUEYr[1].gif"> 
 </p>
 
 <!-- https://i.imgur.com/88QUEYr.gif
