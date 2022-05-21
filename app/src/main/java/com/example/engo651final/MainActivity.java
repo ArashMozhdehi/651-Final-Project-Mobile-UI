@@ -260,7 +260,7 @@ public class MainActivity extends AppCompatActivity {
             return null;
         } finally {
             try {
-                input.close();
+                inputStream.close();
             } catch (Exception e) {
 
             }

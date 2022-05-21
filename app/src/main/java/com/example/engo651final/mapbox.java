@@ -112,7 +112,7 @@ public class mapbox extends AppCompatActivity implements OnMapReadyCallback, Map
     LocationComponent locationComponent;
     PermissionsManager permissionsManager;
     NavigationMapRoute navigationMaproute;
-    String mapbox_access_token = "sk.eyJ1IjoiYW0xOTkwIiwiYSI6ImNsMXMzeWNyNjBubHczbHFxNzlzMG90MHcifQ.f_tYE1axreRgiixOTTy0MA";
+    String mapbox_access_token = "";
     DirectionsRoute currentRoute;
     NavigationMapRoute navigationMapRoute = null;
 
@@ -239,7 +239,7 @@ public class mapbox extends AppCompatActivity implements OnMapReadyCallback, Map
         String src_str = "origin=" + "50.985633800094455" + "," + "-114.03094928665735";
         String dst_str = "destination=" + "51.02665248138959" + "," + "-113.99399626264213";
         String params = src_str + "&" + dst_str + "&" + "mode=bicycling";
-        String url = "https://maps.googleapis.com/maps/api/directions/json?" + params + "&key=AIzaSyDi59Ocp7lnp1lZD4ufqiGmhGuUWiYk2bU";
+        String url = "https://maps.googleapis.com/maps/api/directions/json?" + params + "&key=";
         return url;
     }
 

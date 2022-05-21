@@ -1228,7 +1228,7 @@ public class amenities extends AppCompatActivity implements OnMapReadyCallback, 
     public String getSnippetString(Location src, Location dst) {
         return "Distance in meter: " + String.valueOf(src.distanceTo(dst));
 //        try {
-//            String url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + src.getLatitude() + "," + src.getLongitude() + "&destinations=" + dst.getLatitude() + "," + dst.getLongitude() + "&sensor=false&units=metric&mode=bicycling&key=AIzaSyDi59Ocp7lnp1lZD4ufqiGmhGuUWiYk2bU";
+//            String url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + src.getLatitude() + "," + src.getLongitude() + "&destinations=" + dst.getLatitude() + "," + dst.getLongitude() + "&sensor=false&units=metric&mode=bicycling&key=";
 //            JSONObject jsonObj = MainActivity.readJsonFromUrl(url);
 //            JSONObject distanceJSON = jsonObj
 //                    .getJSONArray("rows")
@@ -1246,7 +1246,7 @@ public class amenities extends AppCompatActivity implements OnMapReadyCallback, 
 
     public String getTravelingDistance(LatLng src, LatLng dst) {
         try {
-            String url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + src.latitude + "%2C" + src.longitude + "&destinations=" + dst.latitude + "%2C" + dst.longitude + "&departure_time=now&mode=bicycling&key=AIzaSyDi59Ocp7lnp1lZD4ufqiGmhGuUWiYk2bU";
+            String url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + src.latitude + "%2C" + src.longitude + "&destinations=" + dst.latitude + "%2C" + dst.longitude + "&departure_time=now&mode=bicycling&key=";
 //            Log.d("Direction Urls", url);
             JSONObject jsonObj = MainActivity.readJsonFromUrl(url);
             JSONObject distanceJSON = jsonObj
@@ -1272,7 +1272,7 @@ public class amenities extends AppCompatActivity implements OnMapReadyCallback, 
         String src_str = "origin=" + src.latitude + "," + src.longitude;
         String dst_str = "destination=" + dst.latitude + "," + dst.longitude;
         String params = src_str + "&" + dst_str + "&" + "mode=bicycling";
-        String url = "https://maps.googleapis.com/maps/api/directions/json?" + params + "&key=AIzaSyDi59Ocp7lnp1lZD4ufqiGmhGuUWiYk2bU";
+        String url = "https://maps.googleapis.com/maps/api/directions/json?" + params + "&key=";
         return url;
     }
 
