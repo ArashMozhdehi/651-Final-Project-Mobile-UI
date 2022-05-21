@@ -1,6 +1,7 @@
 ![Banner](/images/banner.png)
 # Bike Assistant – Mobile Application :bicyclist: :biking_woman:
 
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [UML Architectural Design](#uml-architectural-design)
@@ -87,37 +88,92 @@ The compentents of this sofeware suite are, as follows:
 ## Functionalities
 ### 1. Initiate the App
 #### 1.1. Splash Screen
-![Bike Assistant](/images/bikeassistant.PNG) 
 
-Animated introduction of the mobile application.
+In this splash screen name of the application will be transferred to the top of the screen and below that there Lottie animation of a biker that exits the screen after 2.7 seconds.
+
+<p align="center" width="100%">
+    <img width="20%" src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FufR1dXN61ueZrnNqp9Io%2Fuploads%2Fgit-blob-6b234f74fff70c85fc7689fb746c882c2594c6fa%2Fqemu-system-x86_64_uW3DiEWIVl.gif?alt=media"> 
+</p>
+
 #### 1.2. Internet Connection Checking
-![Internet](/images/internet.PNG) 
+Connectivity to the internet will be checked. This functionality is to make sure that the user have the ability to connect to the back-end, real-time and semi-real-time APIs of the city of Calgary and Google's.
+In case the user is not connected to the Internet an alert will be shown to ask the user to activate a WiFi or mobile connection. In case that the user doesn't want to connect to the Internet there is an exit button that closes the application as this application cannot work without the Internet.
 
-Internet connectivity check to ensure user is able to connect the back-end with real-time and semi-real-time API from the open data portal of the city of Calgary.
-User will be alerted and asked to activate a Wi-Fi or mobile connection if user is not connected to the Internet.
-Use can press exit button to close the application if user does not want to connect to the Internet.
+<p align="center" width="100%">
+    <img width="20%" src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FufR1dXN61ueZrnNqp9Io%2Fuploads%2Fgit-blob-4849ece1b1d10b4d2910d32f3682e4a70b5fb643%2FZ6idRWU.gif?alt=media"> 
+</p>
+
 ### 2. Authentication 
 #### 2.1. Login 
-![Login](/images/login.PNG) 
 
-It is a secure login system that receives Token from the back-end and stores it in the internal DB. There is secure communication between the flask-based back-end and this Mobile UI. User is required to fill in username and password for login.
+This login page has an nice Day and Night animation as well as an animation that moves the text-boxes and button from outside of the page to the middle. This login page allows secure login to the system and receives the Token from the back-end and stores it in the internal DB to be used in future for secure communication between the flask-based back-end and this Mobile UI.
+
+<p align="center" width="100%">
+    <img width="20%" src="/images/bS0P9hW[1].gif"> 
+</p>
+
+
+<p align="center" width="100%">
+    <img width="20%" src="/images/XLr2L15[1].gif"> 
+</p>
+
+
 #### 2.2. Registration
-![Registration](/images/registration.PNG) 
 
-User is required to provide (i) username, (ii) first name, (iii) last name, (iv) password and (v) weight to create an account. Duplicated username is not allowed and the application will check if the user is already existed. Successful registration will be re-directed to login page with username being auto-filled.
+<!-- ![Registration](/images/registration.PNG)  -->
+The registration page with nice Day and Night animation provide a nice UI for the user to register an account in the system using the back-end server powered by Flask.
+The registration page asks the user to enter his/her first name, last name and weight, email, as well as a username and password combination for the secure access in the future. The application checks whether the user already exists if so an error will be prompted. For providing the user with a great user experience upon the successful registration the user will be redirected to login page and the user field will be filled with the username for convenient login.
+
+<p align="center" width="100%">
+    <img width="20%" src="/images/cE4PjHu[1].gif"> 
+</p>
+
 #### 2.3. Forgot Password
-![ForgotPassword](/images/ForgotPassword1.PNG) 
-![ForgotPassword](/images/ForgotPassword2.PNG) 
 
-User can click “Forgot your password?” in case it is needed. User is then required to input the email address of the registered account for receiving a secure recovery code to reset password.
-
-![ForgotPassword](/images/ForgotPassword3.PNG) 
-
+User can click on “Forgot your password?” in case they forgot their credentials. User is then required to input the email address of the registered account for receiving a secure recovery code to reset password.
 An email will be sent to user with the recovery code.
+User can key in the recovery code to the mobile application. New password can be set for the account. 
+
+
+<p align="center" width="100%">
+    <img width="20%" src="/RzF9vUB[1].gif"> 
+</p>
+
+<p align="center" width="100%">
+    <img width="20%" src="/MfeKmZR[1].gif"> 
+</p>
+<!-- ![ForgotPassword](/images/ForgotPassword1.PNG) 
+![ForgotPassword](/images/ForgotPassword2.PNG)  -->
+<!-- 
+<p align="center" width="100%">
+    <img width="20%" src="/MfeKmZR[1].gif"> 
+</p>
+
+<p align="center" width="100%">
+    <img width="20%" src="/MfeKmZR[1].gif"> 
+</p> -->
+
+<!-- <p align="center" width="100%">
+    <img width="20%" src="/images/IdtgYrU[1].gif"> 
+</p> -->
+<!-- https://i.imgur.com/IdtgYrU.gif -->
+
+<p align="center" width="100%">
+    <img width="20%" src="/images/IdtgYrU[1].gif"> 
+</p>
+
+<p align="center" width="100%">
+    <img width="80%" src="/images/88QUEYr[1].gif"> 
+</p>
+
+<!-- https://i.imgur.com/88QUEYr.gif
+ -->
+<!-- ![ForgotPassword](/images/ForgotPassword3.PNG) 
+
 
 ![ForgotPassword](/images/ForgotPassword4.PNG) 
 ![ForgotPassword](/images/ForgotPassword5.PNG) 
-![ForgotPassword](/images/ForgotPassword6.PNG) 
+![ForgotPassword](/images/ForgotPassword6.PNG)  -->
 
 User can key in the recovery code to the mobile application. New password can be set for the account. 
 
@@ -225,8 +281,3 @@ This Mobile application satisfies the following requirements for the ENGO 651 co
 
 ## Project Launch
 February 2022
-
-
-## Project Launch
-April 2022
-
