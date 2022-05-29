@@ -14,7 +14,7 @@
 
 
 ## Introduction
-“Bike Assistant” is a software suite aims to provide an aesthetically pleasing and animated UI for cyclists in Calgary to have one-stop supporting service during their journey. The goal of this project is to provide a more convenient, fun and safer cycling experience for Calgarians. “Bike Assistant” consists of an android mobile app and an interactive web map app. This file describes the functionalities of the mobile app. Please refer to [another repo](https://github.com/ArashMozhdehi/ENGO-651-Final-Project-Backend) of this project for the technologies and technical details applied as well as the functionalities of the web map app. 
+“Bike Assistant” is a software suite aims to provide an aesthetically pleasing and animated UI for cyclists in Calgary to have one-stop supporting service during their journey. The goal of this project is to provide a more convenient, fun and safer cycling experience for Calgarians. “Bike Assistant” consists of an android mobile app and an interactive web map app. This file describes the functionalities of the mobile app. Please refer to [another repo](https://github.com/ArashMozhdehi/651-Final-Project-Backend) of this project for the technologies and technical details applied as well as the functionalities of the web map app. 
 
 
 ## UML Architectural Design
